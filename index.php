@@ -5,7 +5,7 @@ $ad_check_file='check.txt'; // файл для записи текущего с�
 $ad_temp_file='all_ip.txt'; // временный файл 
 $ad_black_file='black_ip.txt'; // будут заносится ip машин зомби 
 $ad_white_file='white_ip.txt'; // заносятся ip посетителей 
-$ad_dir='anti_ddos'; // каталог со скриптами 
+$ad_dir='antiddos'; // каталог со скриптами 
 $ad_num_query=0; // текущее количество запросов в секунду из файла $check_file 
 $ad_sec_query=0; // секунда из файла $check_file 
 $ad_end_defense=0; // время окончание защиты из файла $check_file 
@@ -22,7 +22,7 @@ die("Не хватает файлов.");
 require("{$ad_dir}/{$ad_check_file}"); 
 
 if ($ad_end_defense and $ad_end_defense>$ad_date){ 
-require("/anti_ddos/index.php");
+require("/antiddos/index.php");
 } else { 
 if($ad_sec==$ad_sec_query){ 
 $ad_num_query++; 
